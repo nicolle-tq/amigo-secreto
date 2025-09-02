@@ -11,3 +11,9 @@ function agregarAmigo() {
     listaAmigos.push(inputAmigo.value);
     ulListaAmigos.innerHTML += `<li>${inputAmigo.value}</li>`;
 };
+
+function sortearAmigo() {
+    let random = Math.floor((Math.random() * listaAmigos.length));
+    let amigoSecreto = listaAmigos[random];
+    ulResultado.innerHTML = `<li>El amigo secreto es : ${amigoSecreto}</li>`;
+};
