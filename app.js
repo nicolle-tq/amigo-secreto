@@ -10,10 +10,15 @@ function agregarAmigo() {
     }
     listaAmigos.push(inputAmigo.value);
     ulListaAmigos.innerHTML += `<li>${inputAmigo.value}</li>`;
+    inputAmigo.value = "";
 };
 
 function sortearAmigo() {
     let random = Math.floor((Math.random() * listaAmigos.length));
     let amigoSecreto = listaAmigos[random];
     ulResultado.innerHTML = `<li>El amigo secreto es : ${amigoSecreto}</li>`;
+    if (listaAmigos.length === 0) {
+        alert("No hay amigos para sortear");
+        return;
+    }
 };
